@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             parserFactory = XmlPullParserFactory.newInstance();
             XmlPullParser parser = parserFactory.newPullParser();
-
+            
             // Qui va inserito il percorso del XML
             InputStream is = getAssets().open("data.xml");
 
