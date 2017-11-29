@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             parserFactory = XmlPullParserFactory.newInstance();
             XmlPullParser parser = parserFactory.newPullParser();
 
-            // Qui va inserito il percordo del XML
+            //Qui va inserito il percorso del XML
             InputStream is = getAssets().open("data.xml");
 
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
