@@ -6,5 +6,5 @@ package com.fast0n.parsingxml;
 
 public class Parsing {
 
-    public String name, age, position;
+    public String ssid, password;
 }

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             parserFactory = XmlPullParserFactory.newInstance();
             XmlPullParser parser = parserFactory.newPullParser();
 
-            // Qui va inserito il percordo del XML
+            // Qui va inserito il percorso del XML
             InputStream is = getAssets().open("data.xml");
 
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
@@ -48,37 +48,38 @@ public class MainActivity extends AppCompatActivity {
 
         while (eventType != XmlPullParser.END_DOCUMENT) {
             String eltName = null;
+            String eltNames = null;
 
             switch (eventType) {
-            case XmlPullParser.START_TAG:
-                eltName = parser.getName();
+                case XmlPullParser.START_TAG:
+                    eltName = parser.getName();
+                    // prende l'attributo interno <string name="SSID" />
+                    eltNames = parser.getAttributeValue(null, "name");
 
-                // entra dentro la specifica tabella <elements>
-                if ("elements".equals(eltName)) {
-                    currentElement = new Parsing();
-                    elements.add(currentElement);
-                } else if (currentElement != null) {
-                    if ("name".equals(eltName)) {
-                        currentElement.name = parser.nextText();
-                    } else if ("age".equals(eltName)){
-                        currentElement.age = parser.nextText();
-                    } else if ("position".equals(eltName)){
-                        currentElement.position = parser.nextText();
+                    // entra dentro la specifica tabella <Network>
+                    if ("Network".equals(eltName)) {
+                        currentElement = new Parsing();
+                        elements.add(currentElement);
+                    } else if (currentElement != null) {
+                        if ("SSID".equals(eltNames)) {
+                            currentElement.ssid = parser.nextText();
+                        } else if ("PreSharedKey".equals(eltNames)) {
+                            currentElement.password = parser.nextText();
+                        }
                     }
-                }
-                break;
+                    break;
 
             }
             eventType = parser.next();
         }
-            printElements(elements);
+        printElements(elements);
     }
 
     private void printElements(ArrayList<Parsing> elements){
         StringBuilder builder = new StringBuilder();
-        
+
         for (Parsing element : elements){
-            builder.append(element.name).append("\n").append(element.age).append("\n").append(element.position).append("\n\n");
+            builder.append(element.ssid).append("\n").append(element.password).append("\n\n");
         }
 
         String[] array = builder.toString().split("\n\n");
@@ -87,5 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(MainActivity.this, array[i], Toast.LENGTH_LONG).show();
         }
+
+
     }
 }

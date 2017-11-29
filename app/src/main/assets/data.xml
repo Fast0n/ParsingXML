@@ -1,18 +1,104 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<element>
-    <elements>
-        <name>A</name>
-        <age>1</age>
-        <position>P1</position>
-    </elements>
-    <elements>
-        <name>B</name>
-        <age>2</age>
-        <position>P2</position>
-    </elements>
-    <elements>
-        <name>C</name>
-        <age>3</age>
-        <position>P3</position>
-    </elements>
-</element>
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<WifiConfigStoreData>
+    <int name="Version" value="1" />
+    <NetworkList>
+        <Network>
+            <WifiConfiguration>
+                <string name="ConfigKey">&quot;Urbino WiFi&quot;NONE</string>
+                <string name="SSID">&quot;Urbino WiFi&quot;</string>
+                <null name="BSSID" />
+                <null name="PreSharedKey" />
+                <null name="WEPKeys" />
+                <int name="WEPTxKeyIndex" value="0" />
+                <boolean name="HiddenSSID" value="false" />
+                <boolean name="RequirePMF" value="false" />
+                <byte-array name="AllowedKeyMgmt" num="1">01</byte-array>
+                <byte-array name="AllowedProtocols" num="1">03</byte-array>
+                <byte-array name="AllowedAuthAlgos" num="1">01</byte-array>
+                <byte-array name="AllowedGroupCiphers" num="1">0f</byte-array>
+                <byte-array name="AllowedPairwiseCiphers" num="1">06</byte-array>
+                <boolean name="Shared" value="true" />
+                <int name="Status" value="2" />
+                <null name="FQDN" />
+                <null name="ProviderFriendlyName" />
+                <null name="LinkedNetworksList" />
+                <boolean name="ValidatedInternetAccess" value="true" />
+                <boolean name="NoInternetAccessExpected" value="false" />
+                <int name="UserApproved" value="0" />
+                <boolean name="MeteredHint" value="false" />
+                <boolean name="UseExternalScores" value="false" />
+                <int name="NumAssociation" value="150" />
+                <int name="CreatorUid" value="1000" />
+                <string name="CreatorName">android.uid.system:1000</string>
+                <string name="CreationTime">time=11-14 09:48:51.487</string>
+                <int name="LastUpdateUid" value="1000" />
+                <string name="LastUpdateName">android.uid.system:1000</string>
+                <int name="LastConnectUid" value="1000" />
+                <boolean name="IsLegacyPasspointConfig" value="false" />
+                <long-array name="RoamingConsortiumOIs" num="0" />
+            </WifiConfiguration>
+            <NetworkStatus>
+                <string name="SelectionStatus">NETWORK_SELECTION_ENABLED</string>
+                <string name="DisableReason">NETWORK_SELECTION_ENABLE</string>
+                <null name="ConnectChoice" />
+                <long name="ConnectChoiceTimeStamp" value="-1" />
+                <boolean name="HasEverConnected" value="true" />
+            </NetworkStatus>
+            <IpConfiguration>
+                <string name="IpAssignment">DHCP</string>
+                <string name="ProxySettings">NONE</string>
+            </IpConfiguration>
+        </Network>
+        <Network>
+            <WifiConfiguration>
+                <string name="ConfigKey">&quot;UNIURB_5ghz&quot;NONE</string>
+                <string name="SSID">&quot;UNIURB_5ghz&quot;</string>
+                <null name="BSSID" />
+                <null name="PreSharedKey" />
+                <null name="WEPKeys" />
+                <int name="WEPTxKeyIndex" value="0" />
+                <boolean name="HiddenSSID" value="false" />
+                <boolean name="RequirePMF" value="false" />
+                <byte-array name="AllowedKeyMgmt" num="1">01</byte-array>
+                <byte-array name="AllowedProtocols" num="1">03</byte-array>
+                <byte-array name="AllowedAuthAlgos" num="1">01</byte-array>
+                <byte-array name="AllowedGroupCiphers" num="1">0f</byte-array>
+                <byte-array name="AllowedPairwiseCiphers" num="1">06</byte-array>
+                <boolean name="Shared" value="true" />
+                <int name="Status" value="2" />
+                <null name="FQDN" />
+                <null name="ProviderFriendlyName" />
+                <null name="LinkedNetworksList" />
+                <null name="DefaultGwMacAddress" />
+                <boolean name="ValidatedInternetAccess" value="true" />
+                <boolean name="NoInternetAccessExpected" value="false" />
+                <int name="UserApproved" value="0" />
+                <boolean name="MeteredHint" value="false" />
+                <boolean name="UseExternalScores" value="false" />
+                <int name="NumAssociation" value="2" />
+                <int name="CreatorUid" value="1000" />
+                <string name="CreatorName">android.uid.system:1000</string>
+                <string name="CreationTime">time=11-18 17:12:26.160</string>
+                <int name="LastUpdateUid" value="1000" />
+                <string name="LastUpdateName">android.uid.system:1000</string>
+                <int name="LastConnectUid" value="1000" />
+                <boolean name="IsLegacyPasspointConfig" value="false" />
+                <long-array name="RoamingConsortiumOIs" num="0" />
+            </WifiConfiguration>
+            <NetworkStatus>
+                <string name="SelectionStatus">NETWORK_SELECTION_ENABLED</string>
+                <string name="DisableReason">NETWORK_SELECTION_ENABLE</string>
+                <null name="ConnectChoice" />
+                <long name="ConnectChoiceTimeStamp" value="-1" />
+                <boolean name="HasEverConnected" value="true" />
+            </NetworkStatus>
+            <IpConfiguration>
+                <string name="IpAssignment">DHCP</string>
+                <string name="ProxySettings">NONE</string>
+            </IpConfiguration>
+        </Network>
+    </NetworkList>
+    <PasspointConfigData>
+        <long name="ProviderIndex" value="0" />
+    </PasspointConfigData>
+</WifiConfigStoreData>
